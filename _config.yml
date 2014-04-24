@@ -1,0 +1,4 @@
+name: Salut
+markdown: kramdown
+pygments: true
+future: false
