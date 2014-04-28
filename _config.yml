@@ -1,4 +1,6 @@
 name: Salut
 markdown: kramdown
+permalink: /:day-:month-:year-:title
 pygments: true
 future: false
+paginate: 1

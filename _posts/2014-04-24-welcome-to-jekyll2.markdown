@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2014-04-24
-categories: jekyll update
+title:  "Welcome to Jekyll! 2"
+subtitle: "Un super sous titre"
+category: jekyll
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!

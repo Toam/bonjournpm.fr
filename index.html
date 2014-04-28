@@ -1,51 +1,19 @@
 ---
-layout: default
+layout : default
 title: Your New Jekyll Site
 ---
-<div class="boxed  push-down-45">
-  <div class="meta">
-    <div class="row">
-      <div class="col-xs-12  col-sm-10  col-sm-offset-1">
-        <div class="meta__container--without-image">
-          <div class="row">
-            <div class="col-xs-12  col-sm-8">
-              <div class="meta__info">
-                <span class="meta__date"><span class="glyphicon glyphicon-calendar"></span>  &nbsp; 24/04/2014</span> 
-              </div>
-            </div>
-            <div class="col-xs-12  col-sm-4">
-              <div class="meta__comments">
-                <span class="meta__date"><span class="glyphicon glyphicon-tag"></span>  &nbsp; Outil</span> 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-xs-10  col-xs-offset-1">
-      <div class="post-content--front-page">
-        <h2 class="double-title  front-page-title">
-          <a href="single-post-without-image.html">Fixmyjs</a> 
-        </h2>
-        <h3>Ce package corrige les erreurs dans votre fichier JS</h3>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-{% highlight js %}
-var app = express();
-app.get('/', function(req, res){ res.send('Hello World'); });
+{% for post in paginator.posts %}
+{% assign post = site.posts.first %}
+{% assign content = post.content %}
+{% include post.html %}
+{% endfor %}
 
-app.listen(3000);
-console.log('Express started on port 3000');
-{% endhighlight %}
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-      </div>
-      <div class="read-more">
-        <a href="#" class="tags__link">&lt; Package précédent</a>
-      </div>
-    </div>
-  </div>
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="tags__link">&lt;&lt; Package précédent</a>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="tags__link">Package Suivant &gt;&gt;</a>
+  {% endif %}
 </div>
