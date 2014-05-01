@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "Police"
+subtitle: "Vérifie l'état de vos projets"
+category: outils
+---
+
+[Police][police] est un package NPM qui affiche des informations sur les
+dépendances de vos projets Github. Police va tous les parcourir et les
+analyser. Il peut aussi suggérer des corrections dans votre fichier
+package.json.
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight javascript %}
+npm install police -g
+{% endhighlight %}
+
+Il faudra ensuite s'authentifier sur Github :
+{% highlight javascript %}
+police auth
+{% endhighlight %}
+
+
+Il suffit ensuite de lancer la commande `police` pour faire un audit
+de tous les projets contenant un fichier package.json.
+
+On obtient alors un rapport pour chaque projet :
+<img src="/images/posts/police.png" width="600px"/>
+
+Plus d'information sur [la page du package][police]
+
+
+[police]: https://github.com/pksunkara/npm-police
