@@ -11,13 +11,14 @@ analyser. Il peut aussi suggérer des corrections dans votre fichier
 package.json.
 
 Il est possible d'installer ce package grâce à la commande :
-{% highlight javascript %}
-npm install police -g
+{% highlight bash %}
+$ npm install police -g
 {% endhighlight %}
 
-Il faudra ensuite s'authentifier sur Github :
-{% highlight javascript %}
-police auth
+Il faudra ensuite s'authentifier sur Github en tapant la commande
+suivante dans un terminal :
+{% highlight bash %}
+$ police auth
 {% endhighlight %}
 
 
