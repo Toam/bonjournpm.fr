@@ -1,4 +1,6 @@
-name: Salut
+name: Bonjour NPM
+description: Découvrez tous les jours un package NPM
+url: http://www.bonjournpm.fr
 markdown: kramdown
 permalink: /:day-:month-:year-:title
 pygments: true
