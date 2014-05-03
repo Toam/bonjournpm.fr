@@ -28,7 +28,7 @@ de tous les projets contenant un fichier package.json.
 On obtient alors un rapport pour chaque projet :
 <img src="/images/posts/police.png" width="600px"/>
 
-Plus d'information sur [la page du package][police]
+Plus d'information sur [la page du package][police].
 
 
 [police]: https://github.com/pksunkara/npm-police
