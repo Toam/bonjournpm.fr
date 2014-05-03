@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "fixmyjs"
+subtitle: "Corrige le style de vos fichiers JS"
+category: 
+---
+
+[Fixmyjs][fixmyjs] est un package NPM qui permet de corriger
+automatiquement les erreurs lint d'un façon non desctructive.
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install fixmyjs -g
+{% endhighlight %}
+
+On peut utiliser cet outil en ligne de commande 
+{% highlight bash %}
+$ fixmyjs mon_fichier.js
+{% endhighlight %}
+
+On peut aussi utiliser `fixmyjs` directement depuis node.js :
+{% highlight js %}
+var fixmyjs = require('fixmyjs')
+var stringFixedCode = fixmyjs.fix(stringOfCode, objectOfOptions)
+{% endhighlight %}
+
+Plus d'information sur [la page du package][fixmyjs], avec notamment le
+détail des modifications qui seront effectués sur vos fichiers.
+
+
+[fixmyjs]: https://github.com/jshint/fixmyjs

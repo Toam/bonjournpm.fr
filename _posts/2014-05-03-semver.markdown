@@ -15,8 +15,7 @@ Il est possible d'installer ce package grâce à la commande :
 $ npm install semver
 {% endhighlight %}
 
-Il faudra ensuite s'authentifier sur Github en tapant la commande
-suivante dans un terminal :
+On peut ensuite l'utiliser directement en js :
 {% highlight js %}
 semver.valid('1.2.3') // '1.2.3'
 semver.valid('a.b.c') // null

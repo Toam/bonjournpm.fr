@@ -1,0 +1,75 @@
+---
+layout: post
+title:  "api-easy"
+subtitle: "Une surcouche à vows pour tester les APIs"
+category: tests
+---
+
+[Api easy][api-easy] est un package NPM qui propose des outils pour
+tester plus facilement une API avec Vows.
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install api-easy
+{% endhighlight %}
+
+Voici un exemple de test unitaire pour tester un appel en POST avec Vows **sans le package** :
+{% highlight js %}
+var request = require('request'),
+      vows = require('vows'),
+      assert = require('assert');
+
+vows.describe('your/awesome/api').addBatch({
+  "When using your awesome api": {
+    "and your awesome resource": {
+      "A POST to /awesome": {
+        topic: function () {
+          request({
+            uri: 'http://localhost:8080/awesome',
+            method: 'POST',
+            body: JSON.stringify({ test: 'data' }),
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          }, this.callback)
+        },
+        "should respond with 200": function (err, res, body) {
+          assert.equal(res.statusCode, 200);
+        },
+        "should respond with ok": function (err, res, body) {
+          var result = JSON.parse(body);
+          assert.equal(result.ok, true);
+        },
+        "should respond with x-test-header": function (err, res, body)
+        {
+          assert.include(res.headers, 'x-test-header');
+        }
+      }
+    }
+  }
+}).export(module);
+{% endhighlight %}
+
+Le même test est beaucoup plus succint grâce au package api-easy :
+{% highlight js %}
+var APIeasy = require('api-easy'),
+      assert = require('assert');
+
+  var suite = APIeasy.describe('your/awesome/api');
+
+  suite.discuss('When using your awesome API')
+       .discuss('and your awesome resource')
+       .use('localhost', 8080)
+       .setHeader('Content-Type', 'application/json')
+       .post('/awesome', { test: 'data' })
+         .expect(200, { ok: true })
+         .expect('should respond with x-test-header', function (err, res, body) {
+           assert.include(res.headers, 'x-test-header');
+         })
+       .export(module);
+{% endhighlight %}
+
+Plus d'information et toute la documentation sur [la page du package][api-easy].
+
+
+[api-easy]: https://github.com/flatiron/api-easy
