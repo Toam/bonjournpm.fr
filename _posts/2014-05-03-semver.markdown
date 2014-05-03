@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Semver"
+subtitle: "Permet de parser facilement des numéros de version"
+category: outils
+---
+
+[Semver][semver] est un package NPM qui permet de parser des numéros de
+version afin de vérifier qu'ils sont valide. Il est aussi possible de
+faire simplement des comparaisons et des tests sur les versions. Ce
+package est utilisé par NPM. 
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install semver
+{% endhighlight %}
+
+Il faudra ensuite s'authentifier sur Github en tapant la commande
+suivante dans un terminal :
+{% highlight js %}
+semver.valid('1.2.3') // '1.2.3'
+semver.valid('a.b.c') // null
+semver.clean('  =v1.2.3   ') // '1.2.3'
+semver.satisfies('1.2.3', '1.x || >=2.5.0 || 5.0.0 - 7.2.3') // true
+semver.gt('1.2.3', '9.8.7') // false
+semver.lt('1.2.3', '9.8.7') // true
+{% endhighlight %}
+
+Plus d'information sur [la page du package][semver]
+
+
+[semver]: https://github.com/isaacs/node-semver
