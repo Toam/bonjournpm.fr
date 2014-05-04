@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "mongo-sql"
+subtitle: "Ecrivez vos requêtes SQL en JSON"
+category: 
+---
+
+[mongo-sql][mongo-sql] est un package NPM qui permet d'utiliser du JSON
+pour décrire des requêtes SQL.
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install mongo-sql
+{% endhighlight %}
+
+La syntaxe pour les requêtes est complètement en JSON :
+{% highlight js %}
+var builder = require('mongo-sql');
+
+var usersQuery = {
+  type: 'select'
+, table: 'users'
+, where: { $or: { id: 5, name: 'Bob' } }
+};
+
+var result = builder.sql(usersQuery);
+result.toString()
+{% endhighlight %}
+
+Cette exemple produit la requête SQL suivante :
+{% highlight js %}
+select "users".* from "users" where "users.id" = $1 or "users"."name" =
+$2
+{% endhighlight %}
+
+
+Plus d'information sur [la page du package][mongo-sql], il existe aussi
+[un espace en ligne][playground] pour tester la syntaxe.
+
+
+[mongo-sql]: https://github.com/goodybag/mongo-sql
+[playground]: http://mosql.j0.hn/

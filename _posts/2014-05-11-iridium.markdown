@@ -1,0 +1,47 @@
+---
+layout: post
+title:  "iridium"
+subtitle: "Un ORM très performant pour MongoDB"
+category: 
+---
+
+[iridium][iridium] est ORM spécialement concu pour MongoDB qui est très
+léger et très performant. Il permet de manipuler des modèles et
+d'effectuer la validation de leurs données. Des évènements (creating,
+saving, retrived et ready) permettent d'intéragir avec les données à
+différentes étapes de leur cycle de vie.
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install iridium
+{% endhighlight %}
+
+Voici par exemple un modèle :
+{% highlight js %}
+var Model = require('iridium').Model;
+module.exports = function(db) {
+    var schema = {
+        name: String,
+        email: /.+@.+\.\w+/
+    };
+
+    var options = {
+        methods: {
+
+        },
+        virtuals: {
+
+        },
+        preprocessors: [],
+        hooks: {
+
+        }
+    };
+
+    return new Model(db, 'collectionName', schema, options);
+};
+{% endhighlight %}
+
+Plus d'information sur [la page du package][iridium].
+
+[iridium]: https://github.com/sierrasoftworks/iridium

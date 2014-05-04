@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "sift"
+subtitle: "Filtrez vos tableaux à la mode MongoDB"
+category: 
+---
+
+[sift][sift] est un package NPM qui permet d'utiliser les mêmes
+opérations que dans les requêtes MongoDB pour filtrer des tableaux.
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install sift
+{% endhighlight %}
+
+De nombreux opérateurs sont supportés : `$in`, `$nin`,
+`$exists`, `$gte`, `$gt`, `$lte`, `$lt`, `$eq`, `$neq`, `$mod`, `$all`, `$and`, `$or`, `$nor`,
+`$not`, `$size`, `$type`, `$regex`
+
+{% highlight js %}
+var sift = require('sift');
+
+sift({ $in: ['hello','world'] }, ['hello','sifted','array!']);
+//Résultat : ['hello']
+{% endhighlight %}
+
+Plus d'information sur [la page du package][sift].
+
+[sift]: https://github.com/crcn/sift.js

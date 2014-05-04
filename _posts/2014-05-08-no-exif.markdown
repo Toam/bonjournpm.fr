@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "no-exif"
+subtitle: "Supprimez les méta-données de vos photos"
+category: outils 
+---
+
+[no-exif][no-exif] est un package NPM qui permet de faire le ménage dans
+les données associés à vos photos en supprimant les Exif et les données
+GPS de localisation.
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install no-exif -g
+{% endhighlight %}
+
+{% highlight bash %}
+$ noexif mon-image.jpeg
+{% endhighlight %}
+
+Plus d'information sur [la page du package][no-exif].
+
+
+[no-exif]: https://github.com/busterc/no-exif
