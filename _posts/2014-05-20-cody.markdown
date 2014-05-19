@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "Cody"
+subtitle: "Un CMS en Node.js"
+category: cms
+---
+
+[Cody][cody] est un package CMS entièrement réalisé en node.js. Il est
+simple à utiliser mais propose des fonctionnalités très prometteuses.
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install cody
+{% endhighlight %}
+
+Le package permet de créer facilement un site. La seconde commander
+permet de lancer le serveur, le site sera visible à l'adresse
+`http://localhost:3000` :
+{% highlight bash %}
+$ ccs
+$ node index.js
+{% endhighlight %}
+
+Plus d'information sur [la page du package][cody].
+
+
+[cody]: http://cody-cms.org/en/install

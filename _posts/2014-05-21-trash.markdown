@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Trash"
+subtitle: "L'alternative à rm"
+category: systeme
+---
+
+[Trash][trash] est un package NPM qui permet de remplacer la commander
+`rm` dans le terminal. Au lieu d'être completement effacé, les fichiers
+sont déplacé dans la corbeille.
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install -g trash
+{% endhighlight %}
+
+On peut ensuite l'utiliser comme `rm` :
+{% highlight bash %}
+$ trash <monfichier.txt>
+{% endhighlight %}
+
+Plus d'information sur [la page du package][trash].
+
+
+[trash]: https://github.com/

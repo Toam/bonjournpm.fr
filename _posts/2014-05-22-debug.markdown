@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "Debug"
+subtitle: "Vous donne un coup de main pour débugger vos projets"
+category: code 
+---
+
+[Debug][debug] est un package NPM qui permet de tracer d'afficher des
+messages pendant les phases de chasse au bugs.
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install debug
+{% endhighlight %}
+
+Un message sera ajouté grace à la méthonde `debug`.
+{% highlight js %}
+debug('Salut');
+{% endhighlight %}
+
+On peut ajouter des notions de filtres pour afficher uniquement les
+messages pertinants. Par exemple si notre application a un module
+`calculator` :
+{% highlight js %}
+var debug = require('debug')('calculator');
+
+module.exports = {
+  add: function(one, other){
+    debug('Adding numbers:', one, other);
+    var result = one + other;
+    debug('Result:', result);
+    return result;
+  }
+}
+{% endhighlight %}
+
+Il est alors possible de n'afficher que les messages du module
+`calculator` directement dans la console du navigateur :
+{% highlight js %}
+> Debug.enable('calculator')
+{% endhighlight %}
+
+Plus d'information sur [la page du package][debug].
+
+
+[debug]: https://github.com/
