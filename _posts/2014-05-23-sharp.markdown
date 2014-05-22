@@ -1,21 +1,29 @@
 ---
 layout: post
 title:  "sharp"
-subtitle: ""
-category: 
+subtitle: "Redimensonnez rapidement des images"
+category: outils
 ---
 
-[Sharp][sharp] est un package NPM qui permet de 
+[Sharp][sharp] est un package NPM qui permet de changer la taille d'images JPEG, PNG, WebP et TIFF. Le package utilise libvips pour réaliser rapidement les redimensionnements.
 
 Il est possible d'installer ce package grâce à la commande :
 {% highlight bash %}
 $ npm install sharp
 {% endhighlight %}
 
+Il est ensuite très simple de travailler sur les images directement sur le serveur :
 {% highlight js %}
+sharp('input.jpg').resize(300, 200).write('output.jpg', function(err) {
+  if (err) {
+    throw err;
+  }
+  // output.jpg is a 300 pixels wide and 200 pixels high image
+  // containing a scaled and cropped version of input.jpg
+});
 {% endhighlight %}
 
-Plus d'information sur [la page du package][sharp].
+Plus d'information et les informations sur les pré-requis sur [la page du package][sharp].
 
 
 [sharp]: https://github.com/
