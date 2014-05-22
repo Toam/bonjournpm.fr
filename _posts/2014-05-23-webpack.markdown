@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Webpack"
+subtitle: ""
+category: 
+---
+
+[Webpack][webpack] est un package NPM qui permet de 
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install webpack
+{% endhighlight %}
+
+{% highlight js %}
+{% endhighlight %}
+
+Plus d'information sur [la page du package][webpack].
+
+
+[webpack]: https://github.com/webpack/webpack
