@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Webpack"
-subtitle: ""
-category: 
+subtitle: "Creez des bundles de vos modules"
+category: outils
 ---
 
 [Webpack][webpack] est un package NPM qui permet de créer des bundles de modules pour les regrouper dans un seul fichier.
