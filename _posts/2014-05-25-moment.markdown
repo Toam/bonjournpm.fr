@@ -1,0 +1,36 @@
+---
+layout: post
+title:  "Moment"
+subtitle: "Vous donne un coup de main dans la manipulation des dates"
+category: outils
+---
+
+[Moment][moment] est un package NPM qui permet de manipuer très simplement des dates. Il est possible de localiser les dates en Français, de les parser et de les manipuler.
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install moment
+{% endhighlight %}
+
+Moment permet d'afficher des dates et de localiser le résultats en français (et dans plusieurs autres langues). 
+{% highlight js %}
+moment().format('MMMM Do YYYY, h:mm:ss a');
+// ==> May 21th 2014, 6:37:31 pm
+
+moment().format('LLLL');
+// ==> samedi 24 mai 2014 18:40
+{% endhighlight %}
+
+Il est aussi possible de manipuler les dates pour calculer par exemple des durées.
+{% highlight js %}
+moment("20111031", "YYYYMMDD").fromNow();
+// ==> il y a 3 ans
+
+moment().endOf('day').fromNow();
+// ==> dans 5 heures
+{% endhighlight %}
+
+Retrouvez plus d'information et toutes les possiblités de Moment sur [la page du package][moment].
+
+
+[moment]: https://github.com/moment/moment
