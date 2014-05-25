@@ -31,7 +31,7 @@ distance.get(
 {% endhighlight %}
 
 La requête ci-dessus donne le résultat suivant :
-{% endhighlight %}
+{% highlight js %}
 {
   index: null,
   distance: '807 km',
@@ -46,7 +46,7 @@ La requête ci-dessus donne le résultat suivant :
   avoid: null,
   sensor: false
 }
-{% highlight js %}
+{% endhighlight %}
 
 Plus d'information sur [la page du package][google-distance].
 

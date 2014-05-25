@@ -14,11 +14,11 @@ $ npm install -g private-bower
 {% endhighlight %}
 
 On peut ensuite lancer le package grâce à la commande : 
-{% highlight bower %}
+{% highlight js %}
 private-bower
 {% endhighlight %}
 
 Plus d'information sur [la page du package][private-bower].
 
-[bower]: http://bower.io/ 
+[bower]: http://bower.io 
 [private-bower]: https://github.com/Hacklone/private-bower

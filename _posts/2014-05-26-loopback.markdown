@@ -1,0 +1,36 @@
+---
+layout: post
+title:  "Loopback"
+subtitle: "Un Framework node.js réalisé par StrongLoop"
+category: framework 
+---
+
+[Loopback][loopback] est un nouveau framework node.js très prometteur.
+Il permet nottament de créer des API REST simplement en ligne de
+commande. Le framework supporte nativement plusieurs bases de données
+(MySQL, MongoDB, Oracle...). 
+
+<img src="/images/posts/loopback2.png" width="600px"/>
+
+Il est possible d'installer les outils pour utiliser ce framework grâce
+à la commande :
+{% highlight bash %}
+$ npm install strong-cli
+{% endhighlight %}
+
+On peut ensuite créer un projet avec les commandes suivantes : 
+{% highlight js %}
+$ slc lb project my-new-project
+$ cd my-new-project
+$ slc lb model my-model
+$ node app 
+{% endhighlight %}
+
+Nativement, LoopBack propose un explorateur d'API qui permettra
+d'accélerer le développement :
+
+<img src="/images/posts/loopback.png" width="600px"/>
+
+Plus d'information et de nombreux exemples sur [la page du package][loopback].
+
+[loopback]: http://loopback.io/
