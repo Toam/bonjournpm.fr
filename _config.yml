@@ -4,5 +4,5 @@ url: http://www.bonjournpm.fr
 markdown: kramdown
 permalink: /:day-:month-:year-:title
 pygments: true
-future: true
+future: false
 paginate: 1
