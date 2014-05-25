@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "Ramda"
+subtitle: "La boite à outils qu'il vous faut !"
+category: outils 
+---
+
+[Ramda][ramda] est une boite à outils qui permet de remplacer
+underscode. Les deux packages sont équivalent mais l'API de Ramda
+s'utilise de manière différente.
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install ramda
+{% endhighlight %}
+
+Avec Underscore, un filtre sur un tableau ressemble a cela :
+{% highlight js %}
+var validUsers = function(users) {
+  return _.filter(users, function(user) { 
+    return user.name === 'Toto' && _.isEmpty(user.errors); 
+  });
+};
+{% endhighlight %}
+
+Il est possible d'écrire le même filtre de cette façon avec Ramda :
+{% highlight js %}
+var validUsers = R.filter(R.where({ name: 'Toto', errors: R.isEmpty }));
+{% endhighlight %}
+
+Plus d'information sur [la page du package][ramda].
+
+
+[ramda]: https://github.com/CrossEye/ramda

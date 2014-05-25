@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Pageres"
+subtitle: "l'outil qu'il vous faut pour prendre des captures d'écran"
+category: outils 
+---
+
+[Pageres][pageres] est un package NPM qui permet de prendre facilement
+des captures d'écran d'un site web. Il est même possible de chosir la
+résolution et donc de voir le rendu du site sur un écran plus petit.
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install -g pageres
+{% endhighlight %}
+
+Il est possible de prendre plusieurs captures en une seul commande :
+{% highlight js %}
+pagesres bonjournpm.fr google.fr 1366x768 1600x900
+{% endhighlight %}
+
+On obtient alors une image pour chaque site et chaque résolution.
+
+Plus d'information sur [la page du package][pageres] ainsi que tous les
+éléments pour utiliser pageres directement dans un projet Nodejs.
+
+
+[pageres]: https://github.com/sindresorhus/pageres
