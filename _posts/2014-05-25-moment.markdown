@@ -2,7 +2,7 @@
 layout: post
 title:  "Moment"
 subtitle: "Vous donne un coup de main dans la manipulation des dates"
-category: outils
+category: code
 ---
 
 [Moment][moment] est un package NPM qui permet de manipuer très simplement des dates. Il est possible de localiser les dates en Français, de les parser et de les manipuler.
