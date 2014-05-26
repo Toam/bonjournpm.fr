@@ -6,7 +6,7 @@ category: framework
 ---
 
 [Loopback][loopback] est un nouveau framework node.js très prometteur.
-Il permet nottament de créer des API REST simplement en ligne de
+Il permet notamment de créer des API REST simplement en ligne de
 commande. Le framework supporte nativement plusieurs bases de données
 (MySQL, MongoDB, Oracle...). 
 
