@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "Numeral"
+subtitle: "Vous aides à formater et manipuler des nombres"
+category: code 
+---
+
+[Numeral][numeral] est un package NPM qui permet de manipuler simplement des nombres. Il est possible de mettre en forme des nombres à virgule, des prix, des pourcentages et des heures.
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install xixi
+{% endhighlight %}
+
+On peut ensuite réaliser plusieurs opération sur les nombres :
+{% highlight js %}
+var string = numeral(1000.2).format('0,0[.]00 $');
+// donne 1,000.20 $
+
+var string = numeral(7884486213).format('0.0b');
+// donne 7.3GB
+
+var string = numeral(238).format('00:00:00');
+// donne 0:03:58
+{% endhighlight %}
+
+Plus d'information sur [la page du package][numeral].
+
+
+[numeral]: http://numeraljs.com/
