@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "Feathers"
+subtitle: "le package qui vous aide à faire des API Rest"
+category: code
+---
+
+[Feathers][feathers] est un package NPM basé sur Express qui vous aide dans la réalisation d'un webservice REST et qui permet de créer des applications temps réel grace à Socket.IO.
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install feathers
+{% endhighlight %}
+
+On peut ensuite simplement ajouter une méthode REST :
+{% highlight js %}
+app.configure(feathers.rest(function restFormatter(req, res) {
+    res.format({
+      'text/plain': function() {
+      res.end('The todo is: ' + res.data.description);
+    }
+  });
+}))
+.use('/todo', {
+  get: function (id, params, callback) {
+    callback(null, { description: 'You have to do ' + id });
+  }
+});
+{% endhighlight %}
+
+L'intérêt de Feathers réside dans les Services, voir [ici pour plus de détails][services].
+
+Plus d'information sur [la page du package][feathers].
+
+
+[feathers]: https://github.com/feathersjs/feathers/
+[services]: https://github.com/feathersjs/feathers/#services
