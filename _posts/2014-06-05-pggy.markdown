@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Pggy"
+subtitle: "gestion de base postgres en ligne de commande"
+category: outils
+---
+
+[Pggy][pggy] est un package NPM qui permet de naviguer dans une base de
+données postgres depuis un terminal. 
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install pggy -g
+{% endhighlight %}
+
+<img src="/images/posts/pggy.png" width="600px"/>
+
+Plus d'information sur [la page du package][pggy].
+
+[pggy]: https://github.com/bulkan/pggy

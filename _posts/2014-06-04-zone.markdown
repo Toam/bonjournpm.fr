@@ -1,0 +1,48 @@
+---
+layout: post
+title:  "Zone"
+subtitle: "controle de flux et gestion des erreurs"
+category: code 
+---
+
+[Zone][zone] est un package NPM qui vous aidera écrire des fonctions
+asynchrones en node.js et à renvoyer des erreurs lors de l'exécution
+asynchrone de votre code. Le package permet aussi de debugger plus
+simplement en proposant une stack trace plus précise lors de l'exécution
+de fonctions asynchrones.
+
+Il est possible d'installer ce package grâce à la commande :
+{% highlight bash %}
+$ npm install zone
+{% endhighlight %}
+
+L'extrait de code suivant permet de voir comment écrire du code
+asynchrone avec Zone sans utiliser de fonction callback.
+{% highlight js %}
+require('zone').enable();
+var net = require('net');
+
+zone.create(function MyZone() {
+  // Création du contexte de MyZone
+  net.createConnection(...);
+  fs.stat(...)
+
+  if (Math.random() < 0.5)
+    throw new Error('Chaos monkey!');
+  else if (Math.random() < 0.5)
+    zone.return('Chaos monkey in disguise!');
+  else
+    ; // Wait for the zone to auto-exit.
+
+}).setCallback(function(err, result) {
+  // Cette fonction sera exécuté de façon asynchrone
+  // En arrivant à cette étape on est sur que :
+  //   * la connexion sera refermé
+  //   * fs.stat aura fini de s'exécuter
+});
+{% endhighlight %}
+
+Plus d'information sur [la page du package][zone].
+
+
+[zone]: https://github.com/strongloop/zone
